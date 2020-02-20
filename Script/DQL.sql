@@ -1,0 +1,5 @@
+--USADO BANCO DE DADOS
+USE T_Peoples;
+
+--SELECT DQL
+SELECT * FROM Funcionarios;
