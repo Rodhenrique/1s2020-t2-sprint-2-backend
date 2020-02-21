@@ -18,5 +18,12 @@ namespace Senai.Peoples.WebApi.Interfaces
         void AtuaulizarIdCorpo(FuncionariosDomain funcionarios);
       
         void Deletar(int Id);
+
+        FuncionariosDomain BuscarNome(string Nome);
+
+        List<FuncionariosDomain> ListarNomeCompleto();
+
+        List<FuncionariosDomain> ListarPorAsc();
+
     }
 }

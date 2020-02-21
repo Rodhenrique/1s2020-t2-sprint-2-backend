@@ -21,26 +21,47 @@ namespace Senai.Peoples.WebApi.Controllers
              _FuncionariosRepository = new FuncioariosRepository();
         }
 
-
+        //LISTAR TODOS OS FUNCIONARIOS 
         [HttpGet]
         public IEnumerable<FuncionariosDomain> Get()
         {
             return _FuncionariosRepository.Listar();
         }
 
+        //CADASTRAR UM NOVO FUNCIONARIO NO SISTEMA 
         [HttpPost]
         public IActionResult Post(FuncionariosDomain funcionarios)
         {
+
+            if (funcionarios.Nome == "")
+            {
+                return NotFound("E necessario um nome para criar um usuario nenhum Funcionario Criado");
+            }
+            else if(funcionarios.Sobrenome == "")
+            {
+                return NotFound("E necessario um sobrenome para criar um usuario nenhum Funcionario Criado");
+            }
+            else if(funcionarios.DataNascimento == null)
+            {
+                return NotFound("E necessario um data de nascimento para criar um usuario nenhum Funcionario Criado");
+            }
+            else
+            {
             _FuncionariosRepository.AdicionaDados(funcionarios);
 
-            if (funcionarios == null)
-            {
-                return NotFound("Nenhum funcionario Criado");
-            }
-
             return StatusCode(201,new {mensagem = "Funcionario Criado"});
-
+            }
         }
+
+        //LISTAR TODOS OS FUNCIONARIOS  PELA ORDEM ALFABETICA DO A ATÉ O Z
+        [HttpGet("Asc")]
+        public IEnumerable<FuncionariosDomain> ListarPorAsc()
+        {
+            return _FuncionariosRepository.ListarPorAsc();
+        }
+
+        //BUSCAR FUNCIONARIO POR ID
+
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -54,6 +75,29 @@ namespace Senai.Peoples.WebApi.Controllers
             return Ok(funcionarios);
         }
 
+        //BUSCAR FUNCIONARIO PELO NOME
+
+        [HttpGet("BuscarNome/{Nome}")]
+        public IActionResult BuscarPorNome(string Nome)
+        {
+            FuncionariosDomain funcionarios = _FuncionariosRepository.BuscarNome(Nome);
+
+            if (funcionarios == null)
+            {
+                return NotFound("Nenhum funcionario encontrado");
+            }
+
+            return Ok(funcionarios);
+        }
+
+        //LISTAR PELO NOME E SOBRENOME
+        [HttpGet("BuscarNomeCompleto")]
+        public IEnumerable<FuncionariosDomain> BuscarNomeCompleto()
+        {
+            return _FuncionariosRepository.ListarNomeCompleto();
+        }
+
+        //ATUALIZAR AS INFORMAÇÕES DOS FUNCIONARIOS
 
         [HttpPut]
         public IActionResult PutIdCorpo(FuncionariosDomain funcionarios)
@@ -85,6 +129,8 @@ namespace Senai.Peoples.WebApi.Controllers
                     }
                 );
         }
+
+        //DELETAR UM FUNCIONARIO PELO ID 
 
         [HttpDelete("{Id}")]
         public IActionResult Delete(int Id)
