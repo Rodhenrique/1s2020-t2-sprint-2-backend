@@ -22,7 +22,7 @@ namespace Senai.Peoples.WebApi.Repositories
             //CONECTAR NO SQL 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string query = "SELECT * FROM Funcionarios";
+                string query = "SELECT * FROM Usuario";
 
                 con.Open();
 
@@ -57,7 +57,7 @@ namespace Senai.Peoples.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string queryInsert = "INSERT INTO Funcionarios(Nome,Sobrenome,DataNascimento) VALUES(@Nome,@SobreNome,@Data)";
+                string queryInsert = "INSERT INTO Usuario(Nome,Sobrenome,DataNascimento) VALUES(@Nome,@SobreNome,@Data)";
 
 
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con))
@@ -82,7 +82,7 @@ namespace Senai.Peoples.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string queryGetById = "SELECT * FROM Funcionarios WHERE IdFuncionario = @Id";
+                string queryGetById = "SELECT * FROM Usuario WHERE IdFuncionario = @Id";
 
 
                 using (SqlCommand cmd = new SqlCommand(queryGetById, con))
@@ -118,7 +118,7 @@ namespace Senai.Peoples.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string queryAtuaulizarIdCorpo = "UPDATE Funcionarios SET Nome = @Nome,Sobrenome = @Sobrenome,DataNascimento = @Data Where IdFuncionario = @ID; ";
+                string queryAtuaulizarIdCorpo = "UPDATE Usuario SET Nome = @Nome,Sobrenome = @Sobrenome,DataNascimento = @Data Where IdFuncionario = @ID; ";
 
 
                 using (SqlCommand cmd = new SqlCommand(queryAtuaulizarIdCorpo, con))
@@ -142,7 +142,7 @@ namespace Senai.Peoples.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string queryDeletar = "DELETE FROM Funcionarios WHERE IdFuncionario = @ID";
+                string queryDeletar = "DELETE FROM Usuario WHERE IdFuncionario = @ID";
 
 
                 using (SqlCommand cmd = new SqlCommand(queryDeletar, con))
@@ -164,7 +164,7 @@ namespace Senai.Peoples.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string queryGetById = "SELECT * FROM Funcionarios WHERE Nome = @NomeFuncionario";
+                string queryGetById = "SELECT * FROM Usuario WHERE Nome = @NomeFuncionario";
 
 
                 using (SqlCommand cmd = new SqlCommand(queryGetById, con))
@@ -203,7 +203,7 @@ namespace Senai.Peoples.WebApi.Repositories
             //CONECTAR NO SQL 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string query = "SELECT * FROM Funcionarios";
+                string query = "SELECT * FROM Usuario";
 
                 con.Open();
 
@@ -240,7 +240,7 @@ namespace Senai.Peoples.WebApi.Repositories
             //CONECTAR NO SQL 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string query = "select * from Funcionarios ORDER BY Nome ASC";
+                string query = "select * from Usuario ORDER BY Nome ASC";
 
                 con.Open();
 
