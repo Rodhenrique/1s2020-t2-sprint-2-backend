@@ -18,11 +18,12 @@ namespace T_Peoples.Interfaces
 
             void Deletar(int Id);
 
-            UsuarioDomain BuscarNome(string Nome);
+            List<UsuarioDomain> BuscarNome(string Nome);
 
             List<UsuarioDomain> ListarNomeCompleto();
 
-            List<UsuarioDomain> ListarPorAsc();
+            List<UsuarioDomain> ListarPorAsc(string ordem);
 
-        }
+            UsuarioDomain LogarEmailSenha(string email,string senha);
     }
+}
