@@ -49,7 +49,7 @@ namespace T_Peoples.Controllers
             else 
             {
             _TipoUsuarioRepository.AdicionaDados(tipo);
-                return StatusCode(201, new { mensagem = "Funcionario Criado" });
+                return StatusCode(201, new { mensagem = "TipoUsuario Criado" });
             }
             
         }

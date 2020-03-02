@@ -29,6 +29,12 @@ namespace T_Peoples.Controllers
         {
             return _usuarioRepository.Listar();
         }
+
+        /// <summary>
+        /// Valida o usuário
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post(UsuarioDomain usuario)
         {

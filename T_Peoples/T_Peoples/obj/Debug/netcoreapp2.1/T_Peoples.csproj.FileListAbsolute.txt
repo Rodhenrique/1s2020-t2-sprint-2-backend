@@ -26,3 +26,17 @@ C:\Users\henri\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\
 C:\Users\henri\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.RazorTargetAssemblyInfo.cache
 C:\Users\henri\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.dll
 C:\Users\henri\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.pdb
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\bin\Debug\netcoreapp2.1\T_Peoples.deps.json
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\bin\Debug\netcoreapp2.1\T_Peoples.runtimeconfig.json
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\bin\Debug\netcoreapp2.1\T_Peoples.runtimeconfig.dev.json
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\bin\Debug\netcoreapp2.1\T_Peoples.dll
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\bin\Debug\netcoreapp2.1\T_Peoples.pdb
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.csprojAssemblyReference.cache
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.csproj.CoreCompileInputs.cache
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.RazorAssemblyInfo.cache
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.RazorAssemblyInfo.cs
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.AssemblyInfoInputs.cache
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.AssemblyInfo.cs
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.RazorTargetAssemblyInfo.cache
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.dll
+C:\Users\53167369825\Desktop\1s2020-t2-sprint-2-backend\T_Peoples\T_Peoples\obj\Debug\netcoreapp2.1\T_Peoples.pdb

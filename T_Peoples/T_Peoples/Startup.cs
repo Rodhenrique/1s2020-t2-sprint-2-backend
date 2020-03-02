@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 namespace T_Peoples
 {
@@ -22,6 +23,10 @@ namespace T_Peoples
             // Define a versão do .NET Core
             .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "T_Peoples", Version = "v1" });
+            });
 
             services
                 // Define a forma de autenticação
@@ -58,6 +63,7 @@ namespace T_Peoples
                         ValidAudience = "Peoples.WebApi"
                     };
                 });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,11 +74,23 @@ namespace T_Peoples
                 app.UseDeveloperExceptionPage();
             }
 
+             app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "T_Peoples");
+                c.RoutePrefix = string.Empty;
+            });
+
             // Habilita o uso de autenticação
             app.UseAuthentication();
 
             // Habilita o uso do MVC
             app.UseMvc();
+           
+
         }
     }
 }
